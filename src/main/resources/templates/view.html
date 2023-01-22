@@ -1,0 +1,20 @@
+<!-- Nandini Patel -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View Furniture</title>
+</head>
+<body>
+	<table>
+	<tr th:each="f:${furnitureList}">
+			<td th:text="${f.roomType}">Bedroom</td>
+			<td th:text="${f.furnitureCategory}">Queen Bed</td>
+			<td th:text="${f.furnitureName}">IKEA</td>
+			<td th:text="${f.furnitureColor}">Black</td>
+			<td th:text="${f.furniturePrice}">887</td>
+			<td><a th:href="@{/deleteFurniture/}+${f.id}">Delete</a></td>
+		</tr>
+	</table>
+</body>
+</html>

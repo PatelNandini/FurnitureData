@@ -1,0 +1,20 @@
+<!-- Nandini Patel -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Furniture</title>
+</head>
+<body>
+	<form method="post" action="" th:action="@{/insertFurniture}" th:object="${furniture}">
+		<input type="hidden" name="id" th:field="*{id}" />
+		Room Type: <input type="text" name="roomType" th:field="*{roomType}" /><br><br>
+		Furniture Category: <input type="text" name="furnitureCategory" th:field="*{furnitureCategory}" /><br><br>
+		Furniture Name: <input type="text" name="furnitureName" th:field="*{furnitureName}" /><br><br>
+		Furniture Color: <input type="text" name="furnitureColor" th:field="*{furnitureColor}" /><br><br>
+		Furniture Price: <input type="number" name="furniturePrice" th:field="*{furniturePrice}" /><br><br>
+		<input type="submit" value="Go!" />
+	</form>
+	
+</body>
+</html>
